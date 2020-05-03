@@ -14,6 +14,7 @@
 		16F3F6AC245E0FEC00FFB6D4 /* Skillbox14_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 16F3F6AA245E0FEC00FFB6D4 /* Skillbox14_CoreData.xcdatamodeld */; };
 		16F3F6AE245E0FED00FFB6D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F3F6AD245E0FED00FFB6D4 /* Assets.xcassets */; };
 		16F3F6B1245E0FED00FFB6D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F3F6AF245E0FED00FFB6D4 /* LaunchScreen.storyboard */; };
+		16F3F6B9245E11E600FFB6D4 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F3F6B8245E11E600FFB6D4 /* ToDoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		16F3F6AD245E0FED00FFB6D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16F3F6B0245E0FED00FFB6D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16F3F6B2245E0FED00FFB6D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F3F6B8245E11E600FFB6D4 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				16F3F6A3245E0FEC00FFB6D4 /* SceneDelegate.swift */,
 				16F3F6A5245E0FEC00FFB6D4 /* ViewController.swift */,
 				16F3F6A7245E0FEC00FFB6D4 /* Main.storyboard */,
+				16F3F6B8245E11E600FFB6D4 /* ToDoTableViewCell.swift */,
 				16F3F6AD245E0FED00FFB6D4 /* Assets.xcassets */,
 				16F3F6AF245E0FED00FFB6D4 /* LaunchScreen.storyboard */,
 				16F3F6B2245E0FED00FFB6D4 /* Info.plist */,
@@ -145,6 +148,7 @@
 				16F3F6A2245E0FEC00FFB6D4 /* AppDelegate.swift in Sources */,
 				16F3F6AC245E0FEC00FFB6D4 /* Skillbox14_CoreData.xcdatamodeld in Sources */,
 				16F3F6A4245E0FEC00FFB6D4 /* SceneDelegate.swift in Sources */,
+				16F3F6B9245E11E600FFB6D4 /* ToDoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
