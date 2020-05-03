@@ -88,17 +88,17 @@ class ViewController: UIViewController {
             
         }
     
-    func helpingThing() {
+    func deleteData(index: Int) {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        
         let context = appDelegate.persistentContainer.viewContext
+        let toDo = items[index]
         
         do {
-        try! context.save() }
-            catch let error as NSError {
-            print("Error: \(error)")
-                   }
+            try! context.delete(toDo)
+            tableVIew.reloadData()
+            
+        }
     }
     
     
@@ -147,9 +147,36 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let toDo = items[indexPath.row]
-        toDo.value(forKeyPath: "isCompleted") = ! toDo.value(forKeyPath: "isCompleted")
+        let bool = toDo.value(forKeyPath: "isCompleted") as! Bool
         
+        if bool != true {
+            toDo.setValue(true, forKey: "isCompleted")
+        } else { toDo.setValue(false, forKey: "isCompleted")}
+        tableView.reloadData()
         
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let context = appDelegate.persistentContainer.viewContext
+        do { try! context.save()}
+            catch let error as NSError {
+            print("Error: \(error)")
+                   }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            deleteData(index: indexPath.row)
+            items.remove(at: indexPath.row)
+            tableVIew.reloadData()
+        }
+        tableVIew.reloadData()
         
         
     }
